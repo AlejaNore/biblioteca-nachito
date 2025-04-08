@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>NACHO</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/nacho.css">
+        <script type="text/javascript" src="./js/nacho.js"></script>
+    </head>
+    <body>
+        <h3>Indice</h3>
+        <ol type="I" start="1">
+            <font face="ink free" size="3" color="blue">
+                <li><a href="#libros" style="text-decoration: none;">Libros</a></li>
+            </font>
+
+            <font face="ink free" size="3" color="blue">
+                <li><a href="#autores" style="text-decoration: none;">Autores</a></li>
+            </font>
+
+            <font face="ink free" size="3" color="blue">
+                <li><a href="#prueba" style="text-decoration: none;">prueba</a></li>
+            </font>
+        </ol>
+
+        <section id="libros">
+            <h1 align="center">MENU DE LIBROS</h1>
+
+            <form onsubmit="getLibros(); return false ;">
+
+                <label for="id">Id</label>
+                <input type="text" id="id" name="id">
+        
+                <br>
+        
+                <label for="libro">Libro</label>
+                <input type="text" id="libro" name="libro">
+        
+                <br>
+        
+                <label for="isbn">ISBN</label>
+                <input type="text" id="isbn" name="isbn" placeholder="ISBN">
+        
+                <br>
+        
+                <label for="titulo">TITULO</label>
+                <input type="text" id="titulo" name="titulo" placeholder="titulo">
+        
+                <br>
+        
+                <label for="autor">AUTOR</label>
+                <input type="text" id="autor" name="autor" placeholder="AUTOR">
+        
+                <br>
+        
+                <label for="sinopsis">SINOPSIS</label>
+                <input type="text" name="sinopsis" id="sinopsis" placeholder="SINOPSIS">
+        
+                <br>
+        
+                <!--<input type="submit" value="Consultar Libro">-->
+                
+            </form>
+
+            <br>
+            <button onclick="addLibro()">Crear Libro</button>
+            <button onclick="getLibros(); return false;">Consultar Libro</button>
+            <button onclick="delLibro()">Eliminar Libro</button>
+            <button onclick="updLibro()">Actualizar Libro</button>
+            <br>
+            <br>
+            <table id="misLibros" border="1">
+                <thead>
+                    <tr>
+                        <th>ISBN</th>
+                        <th>TITULO</th>
+                        <th>AUTOR</th>
+                        <th>SINOPSIS</th>
+                        <th>No.PAGINAS</th>
+                        <th>T.LITERATURA</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="autores">
+            <h1 align="center">MENU DE AUTORES</h1>
+
+            <label for="titulo">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="nombre">
+
+            <label for="titulo">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="apellidos">
+            <br>
+            <button onclick="">Crear Autor</button>
+            <button onclick="">Consultar Autor</button>
+            <button onclick="">Eliminar Autor</button>
+            <button onclick="">Actualizar Autor</button>
+
+        </section>
+       
+
+        <br>
+        <button onclick="getLibroXAutor()">xAutor</button>      
+        <br>
+        <button onclick="verResLib()">Resumen</button>
+        <br>
+
+        
+
+        <br>
+        
+        <table id="libResumen" border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>ISBN</th>
+                    <th>TITULO</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+
+        <div id="rta">aqui va la respuesta</div>
+
+    </body>
+</html>
